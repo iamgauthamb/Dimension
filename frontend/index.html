@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimension Check Dashboard</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- ========================= -->
+        <!-- MAIN CAMERA -->
+        <!-- ========================= -->
+        <section class="panel camera-main">
+            <div class="panel-header">TOP VIEW CAMERA (PORTRAIT)</div>
+
+            <div class="video-feed">
+                <div class="overlay">LIVE - 01</div>
+                <img src="/video_feed" width="100%">
+            </div>
+        </section>
+
+        <!-- ========================= -->
+        <!-- RIGHT SIDE -->
+        <!-- ========================= -->
+        <div class="right-column">
+
+            <!-- ========================= -->
+            <!-- SELECTION PANEL -->
+            <!-- ========================= -->
+            <section class="panel selector-panel">
+
+                <div class="panel-header">COMPONENT SELECTION</div>
+
+                <!-- 🔥 MODE BUTTONS -->
+                <div style="padding:10px 15px;">
+                    <button class="select-btn" onclick="setMode('manual')">
+                        MANUAL
+                    </button>
+
+                    <button class="select-btn" onclick="setMode('auto')">
+                        AUTOMATIC
+                    </button>
+                </div>
+
+                <!-- MODE STATUS -->
+                <div id="mode-status"
+                     style="padding: 0 20px; color: #00e676; font-size: 14px;">
+                    Mode: MANUAL
+                </div>
+
+                <!-- ========================= -->
+                <!-- EXISTING BUTTONS -->
+                <!-- ========================= -->
+                <div class="button-grid">
+                    <button class="select-btn" onclick="selectComp('Nut')">
+                        NUT
+                    </button>
+
+                    <button class="select-btn" onclick="selectComp('Bolt')">
+                        BOLT
+                    </button>
+
+                    <button class="select-btn" onclick="selectComp('Washer')">
+                        WASHER
+                    </button>
+
+                    <button class="select-btn" onclick="selectComp('Bearing')">
+                        BEARING
+                    </button>
+                </div>
+
+                <!-- SELECTED STATUS -->
+                <div id="status">
+                    Selected: <span id="current-item">None</span>
+                </div>
+
+                <!-- INPUT FIELDS -->
+                <div id="input-fields" class="input-container"></div>
+
+                <!-- CHECK BUTTON (MANUAL ONLY) -->
+                <button class="check-btn" onclick="checkDimensions()">
+                    CHECK
+                </button>
+
+                <!-- RESULT -->
+                <div id="result-status"
+                     style="padding:10px 20px; font-size:16px; font-weight:bold;">
+                    WAITING...
+                </div>
+
+            </section>
+
+            <!-- ========================= -->
+            <!-- SIDE CAMERA -->
+            <!-- ========================= -->
+            <section class="panel camera-sub">
+                <div class="panel-header">SIDE VIEW CAMERA</div>
+
+                <div class="video-feed mini">
+                    <div class="overlay">LIVE - 02</div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="/script.js"></script>
+
+</body>
+</html>

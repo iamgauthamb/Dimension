@@ -1,0 +1,150 @@
+:root {
+    --bg-dark: #121212;
+    --panel-bg: #1e1e1e;
+    --accent: #00e676;
+    --text: #ffffff;
+}
+
+body {
+    margin: 0;
+    background: var(--bg-dark);
+    color: var(--text);
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    padding: 10px;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.panel {
+    background: var(--panel-bg);
+    border: 1px solid #333;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-header {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: #888;
+    border-bottom: 1px solid #333;
+    text-transform: uppercase;
+}
+
+.camera-main {
+    flex: 0.8;
+}
+
+.right-column {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.selector-panel { flex: 1; }
+.camera-sub { flex: 1; }
+
+.video-feed {
+    flex: 1;
+    background: #000;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(255, 0, 0, 0.7);
+    padding: 2px 8px;
+    font-size: 11px;
+    border-radius: 3px;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 15px;
+}
+
+.select-btn {
+    padding: 12px;
+    background: #2a2a2a;
+    border: 1px solid #444;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.select-btn:hover {
+    border-color: var(--accent);
+}
+
+#status {
+    padding: 0 20px 10px;
+    color: var(--accent);
+    font-size: 14px;
+}
+
+.input-container {
+    padding: 15px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    border-top: 1px solid #333;
+}
+
+.input-container input {
+    background: #121212;
+    border: 1px solid #444;
+    color: var(--accent);
+    padding: 8px;
+    border-radius: 4px;
+    width: 90%;
+}
+
+.input-container label {
+    font-size: 11px;
+    color: #aaa;
+}
+
+.video-feed img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.check-btn {
+    margin: 10px 20px;
+    padding: 12px;
+    background: var(--accent);
+    border: none;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#result-status {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#mode-status {
+    font-weight: bold;
+}
